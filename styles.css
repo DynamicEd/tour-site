@@ -1,0 +1,188 @@
+/**
+Palette: https://scrimba.com/links/hometown-palette
+RED: #E63946
+LIGHT: #F1FAEE
+AQUA: #A8DADC
+LIGHT BLUE: #457B9D
+DARK BLUE: #1D3557
+
+*/
+
+@font-face {
+    font-family: CairoPlay;
+    src: url(./font/CairoPlay-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: CairoPlay, display;
+}
+
+#hero {
+    height: 40vh;
+    background: 
+        #457B9D
+        url(./images/YBlZQTn_nNs.jpg)
+        no-repeat
+        bottom;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.hero-title {
+    background: #1D3557;
+    padding: 2px 25px;
+    line-height: 45px;
+    border-radius: 20px;
+}
+
+.hero-sub {
+    max-width: 500px;
+    margin: 0 20px;
+    background: #457B9Daa;
+    border-radius: 10px;
+}
+
+#activities {
+    padding: 20px 0;
+    background: #F1FAEE;
+    border-top: 10px solid #1D3557;
+    border-left: 10px solid #1D3557;
+    border-right: 10px solid #1D3557;
+}
+
+#tour-guide {
+    padding: 20px 0;
+    border-left: 10px solid #1D3557;
+    border-right: 10px solid #1D3557;
+    border-bottom: 10px solid #1D3557;
+}
+
+.activity-title {
+    margin: 20px 0;
+    /* padding: 20px; */
+    font-variant: small-caps;
+}
+
+#activities .row {
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    max-width: 1200px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    /* flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 33%; */
+    flex: 0 1 33%;
+    margin: 10px;
+    padding: 20px;
+    color: white;
+    background: #5a93b6;
+    background: linear-gradient(45deg, #5a93b6, #85badb);
+    border: 5px solid #457B9D;
+    border-radius: 10px;
+    filter: grayscale();
+}
+
+.card:hover {
+    background: #85badb;
+    background: linear-gradient(45deg, #5a93b6 20%, #85badb 80%);
+    box-shadow: 5px 5px #457B9D;
+    filter: grayscale(0);
+    transition: filter;
+    transition-duration: 1s;
+}
+
+.card-title {
+    font-size: larger;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+.card-sub {
+    font-style: italic;
+}
+
+.card-img {
+    max-width: 80%;
+    border-radius: 20px;
+    box-shadow: 0 0 5px black;
+    filter: grayscale();
+}
+
+.card-img:hover {
+    filter: grayscale(0);
+    transition: filter;
+    transition-duration: 1s;
+}
+
+.card-btn {
+    font-size: large;
+    font-family: inherit;
+    font-weight: bold;
+    font-variant: small-caps;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.card-btn:hover {
+    box-shadow: 0 4px #1D3557;
+}
+
+#tour-guide {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background: #457B9D;
+}
+
+#tour-guide .row {
+    padding: 20px;
+}
+
+.guide {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #b0cea5;
+    box-shadow: 0 8px #293424;
+    border-radius: 10px;
+    gap: 5%;
+    background: #F1FAEE;
+}
+
+.guide > * {
+    /* border: 2px solid red; */
+    border-radius: 10px;
+}
+
+.guide-img {
+    max-width: 200px;
+}
+
+@media screen and (max-width: 720px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .guide {
+        flex-direction: column;
+    }
+    .guide > * {
+        margin: 10px;
+    }
+}
